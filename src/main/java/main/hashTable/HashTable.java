@@ -49,7 +49,7 @@ public class HashTable {
             if (table[index].equals(key)) {
                 table[index] = null;
                 size--;
-                rehashFrom(index); // Prevent search failure after deletion
+                rehashFrom(index);
                 return true;
             }
             index = (index + 1) % capacity;
